@@ -1,14 +1,15 @@
 import React from "react";
-import Card from 'react-bootstrap/Card';
+import { Card, Button } from 'react-bootstrap';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from "react-router-dom";
-import "../../styles/cardCharacter.css";
 
 export const CardCharacter = () => {
     return (
 
             <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+               <Card.Img variant="top" src="https://via.placeholder.com/400x200" />
               <Card.Body>
                 <Card.Title>Card Title</Card.Title>
                 <Card.Text>
@@ -22,8 +23,8 @@ export const CardCharacter = () => {
                 <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
               </ListGroup>
               <Card.Body>
-                < Link to="/character" className="learn">Learn more</Link>
-                
+                < Link to="/character"><Button variant="outline-primary">Learn More!</Button></Link> 
+                <Button variant="outline-warning float-end"><FontAwesomeIcon icon={faHeart}/></Button>
               </Card.Body>
             </Card>
     );
