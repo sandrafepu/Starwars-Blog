@@ -9,7 +9,7 @@ export const Home = () =>{
 	const [character, setCharacter] = useState ([]);
 
 	useEffect(() => {
-		fetch("https://swapi.dev/api/people/7/")
+		fetch("https://swapi.dev/api/people/35/")
 		.then((response) => response.json())
 		.then((data) => {
 			const card = document.querySelector('.card');

@@ -14,9 +14,9 @@ export const CardCharacter = (props) => {
               <h2 id="person-title">Person Title</h2>
               </Card.Body>
               <ListGroup className="list-group-flush">
-              <p id="person-gender"> Gender: </p>
-              <p id="person-eye_color"> Eye_color:</p>
-              <p id="person-hair_color"> Hair_color:</p>
+              <strong>Gender:</strong><p id="person-gender"></p>
+              <strong>Eye color:</strong><p id="person-eye_color"> Eye_color:</p>
+              <strong>Hair:</strong><p id="person-hair_color"> Hair_color:</p>
               </ListGroup>
               <Card.Body>
                 < Link to="/character"><Button variant="outline-primary">Learn More!</Button></Link> 
