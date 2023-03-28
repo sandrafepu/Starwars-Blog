@@ -4,6 +4,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from "react-router-dom";
+import { useState } from 'react';
 
 export const CardPlanet = () => {
     return (
@@ -11,16 +12,11 @@ export const CardPlanet = () => {
             <Card style={{ width: '18rem' }}>
                <Card.Img variant="top" src="https://via.placeholder.com/400x200" />
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
+              <h2 id="planet-title">Planet Title</h2>
               </Card.Body>
               <ListGroup className="list-group-flush">
-                <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+              <strong>Population:</strong><p id="planet-population"></p>
+              <strong>Terrain:</strong><p id="planet-terrain"></p>
               </ListGroup>
               <Card.Body>
                 < Link to="/planet"><Button variant="outline-primary">Learn More!</Button></Link> 

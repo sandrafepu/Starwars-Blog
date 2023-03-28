@@ -3,13 +3,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "../../styles/home.css";
 import { CardCharacter } from "../component/CardsCharacters";
 import { CardPlanet } from "../component/CardsPlanets";
+import { CharactersList } from "../component/CharactersList";
 
 export const Home = () =>{ 
 
 	const [character, setCharacter] = useState ([]);
+	const [planet, setPlanet] = useState ([]);
 
 	useEffect(() => {
-		fetch("https://swapi.dev/api/people/35/")
+		fetch("https://swapi.dev/api/people/34/")
 		.then((response) => response.json())
 		.then((data) => {
 			const card = document.querySelector('.card');
@@ -23,6 +25,23 @@ export const Home = () =>{
 			hair_color.textContent = data.hair_color;
 			console.log(data);
 			setCharacter(data.name);
+			});
+	}, []);
+
+	
+	useEffect(() => {
+		fetch("https://swapi.dev/api/planets/9/")
+		.then((response) => response.json())
+		.then((data) => {
+			const card = document.querySelector('.card');
+			const title = card.querySelector('#planet-title');
+			const population = card.querySelector('#planet-population');
+			const terrain = card.querySelector('#planet-terrain');
+			/*title.textContent = data.name;
+			population.textContent = data.population;
+			terrain.textContent = data.terrain;*/
+			console.log(data);
+			setPlanet(data.name);
 			});
 	}, []);
 

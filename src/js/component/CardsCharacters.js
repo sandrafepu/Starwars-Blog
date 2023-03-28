@@ -6,6 +6,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from "react-router-dom";
 
 export const CardCharacter = (props) => {
+
     return (
           
             <Card style={{ width: '18rem' }}>
