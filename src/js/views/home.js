@@ -11,18 +11,10 @@ export const Home = () =>{
 	const [planet, setPlanet] = useState ([]);
 
 	useEffect(() => {
-		fetch("https://swapi.dev/api/people/34/")
+		fetch("https://swapi.dev/api/people/")
 		.then((response) => response.json())
 		.then((data) => {
-			const card = document.querySelector('.card');
-			const title = card.querySelector('#person-title');
-			const gender = card.querySelector('#person-gender');
-			const eye_color = card.querySelector('#person-eye_color');
-			const hair_color = card.querySelector('#person-hair_color');
-			title.textContent = data.name;
-			gender.textContent = data.gender;
-			eye_color.textContent = data.eye_color;
-			hair_color.textContent = data.hair_color;
+		
 			console.log(data);
 			setCharacter(data.name);
 			});
@@ -30,16 +22,10 @@ export const Home = () =>{
 
 	
 	useEffect(() => {
-		fetch("https://swapi.dev/api/planets/9/")
+		fetch("https://swapi.dev/api/planets/")
 		.then((response) => response.json())
 		.then((data) => {
-			const card = document.querySelector('.card');
-			const title = card.querySelector('#planet-title');
-			const population = card.querySelector('#planet-population');
-			const terrain = card.querySelector('#planet-terrain');
-			/*title.textContent = data.name;
-			population.textContent = data.population;
-			terrain.textContent = data.terrain;*/
+		
 			console.log(data);
 			setPlanet(data.name);
 			});

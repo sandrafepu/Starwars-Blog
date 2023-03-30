@@ -1,28 +1,19 @@
 import React, { useState, useEffect} from "react";
+import { CardCharacter } from "./CardsCharacters";
 
 export const CharactersList = () => {
 
     const [list, setList] = useState ([]);
   
-    useEffect(() => {
-        fetch("https://swapi.dev/api/people/")
-          .then((response) => response.json())
-          .then((data) => {
-            setList(data.results);
-          });
-      }, []);
+    const characterMap = props.CharactersList.map((taskName, taskIndex)=>{
+      return <CardCharacter personName={personName} key={taskIndex} removeTask={props.removeTask} taskIndex={taskIndex}/>
+  })
+
+  return(
+      <ul>
+          {characterMap}
+      </ul>
+  )
+
+}
     
-      /*return (
-        <div className="character-list">
-          {characters.map((character) => (
-            <CardsCharacters
-              key={character.url}
-              name={character.name}
-              hairColor={character.hair_color}
-              eyeColor={character.eye_color}
-              gender={character.gender}
-            />
-          ))}
-        </div>
-      );*/
-    };

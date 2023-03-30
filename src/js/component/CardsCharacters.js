@@ -5,19 +5,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from "react-router-dom";
 
-export const CardCharacter = (props) => {
+export const CardCharacter = (person) => {
 
     return (
           
-            <Card style={{ width: '18rem' }}>
+            <Card id="personcard" style={{ width: '18rem' }}>
                <Card.Img variant="top" src="https://via.placeholder.com/400x200" />
               <Card.Body>
-              <h2 id="person-title">Person Title</h2>
+              <h2>{person.name}</h2>
               </Card.Body>
               <ListGroup className="list-group-flush">
-              <strong>Gender:</strong><p id="person-gender"></p>
-              <strong>Eye color:</strong><p id="person-eye_color"> Eye_color:</p>
-              <strong>Hair:</strong><p id="person-hair_color"> Hair_color:</p>
+              <p>Gender: {person.gender}</p>
+              <p>Hair color: {person.hair_color}</p>
+              <p>Eye color: {person.eye_color}</p>
               </ListGroup>
               <Card.Body>
                 < Link to="/character"><Button variant="outline-primary">Learn More!</Button></Link> 

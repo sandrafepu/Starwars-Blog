@@ -6,17 +6,17 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from "react-router-dom";
 import { useState } from 'react';
 
-export const CardPlanet = () => {
+export const CardPlanet = (planet) => {
     return (
 
-            <Card style={{ width: '18rem' }}>
+            <Card id="planetcard" style={{ width: '18rem' }}>
                <Card.Img variant="top" src="https://via.placeholder.com/400x200" />
               <Card.Body>
-              <h2 id="planet-title">Planet Title</h2>
+              <h3>{planet.name}</h3>
               </Card.Body>
               <ListGroup className="list-group-flush">
-              <strong>Population:</strong><p id="planet-population"></p>
-              <strong>Terrain:</strong><p id="planet-terrain"></p>
+              <p>Population: {planet.population}</p>
+              <p>Terrain: {planet.terrain}</p>
               </ListGroup>
               <Card.Body>
                 < Link to="/planet"><Button variant="outline-primary">Learn More!</Button></Link> 
