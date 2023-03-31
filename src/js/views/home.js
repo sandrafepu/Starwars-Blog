@@ -10,6 +10,7 @@ export const Home = () =>{
 		fetch("https://swapi.dev/api/people/")
 		.then((response) => response.json())
 		.then((data) => {
+			//console.log(data)
 			setListCharacters(data);
 		});
 	}, []);

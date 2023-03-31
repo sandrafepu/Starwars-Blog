@@ -5,8 +5,8 @@ import { CardCharacter } from "./CardCharacter";
 export const CharactersList = (props) => {
     if(props.charactersList != undefined) {
         const charactersMap = props.charactersList.map((character, index) => {
-            /*console.log(character);*/
             return  <CardCharacter 
+                index={index + 1}
                 key={index}
                 name={character.name}
                 gender={character.gender}
