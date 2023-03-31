@@ -1,19 +1,24 @@
-import React, { useState, useEffect} from "react";
-import { CardCharacter } from "./CardsCharacters";
+import React from "react";
+import { CardCharacter } from "./CardCharacter";
 
-export const CharactersList = () => {
 
-    const [list, setList] = useState ([]);
-  
-    const characterMap = props.CharactersList.map((taskName, taskIndex)=>{
-      return <CardCharacter personName={personName} key={taskIndex} removeTask={props.removeTask} taskIndex={taskIndex}/>
-  })
+export const CharactersList = (props) => {
+    if(props.charactersList != undefined) {
+        const charactersMap = props.charactersList.map((character, index) => {
+            /*console.log(character);*/
+            return  <CardCharacter 
+                key={index}
+                name={character.name}
+                gender={character.gender}
+                hair_color={character.hair_color}
+                eye_color={character.eye_color}
+                />
+        })
 
-  return(
-      <ul>
-          {characterMap}
-      </ul>
-  )
-
+        return(
+            <div>
+                {charactersMap}
+            </div>
+        )
+    }
 }
-    
