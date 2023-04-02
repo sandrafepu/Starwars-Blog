@@ -4,10 +4,12 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from "react-router-dom";
+import "../../styles/cardcharacters.css";
 
 export const CardCharacter = (props) => {
 
-  return (     
+  return (  
+    < div className="listcards">  
     <Card id="personcard" style={{ width: '18rem' }}>
       <Card.Img variant="top" src="https://via.placeholder.com/400x200" />
         <Card.Body>
@@ -23,5 +25,6 @@ export const CardCharacter = (props) => {
           <Button variant="outline-warning float-end"><FontAwesomeIcon icon={faHeart}/></Button>
       </Card.Body>
     </Card> 
+    </div> 
   );
 };

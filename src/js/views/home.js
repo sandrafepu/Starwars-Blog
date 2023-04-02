@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import "../../styles/home.css";
 import { CharactersList } from "../component/CharactersList";
 
+
 export const Home = () =>{ 
 
 	const [listCharacters, setListCharacters] = useState([]);
@@ -19,6 +20,7 @@ export const Home = () =>{
 	<div className="mt-5">
         <h1><strong>Characters</strong></h1>
 		<CharactersList charactersList={listCharacters.results}/>
+		<h1><strong>Planets</strong></h1>
 	</div>
 );
 };

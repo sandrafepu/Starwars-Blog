@@ -1,0 +1,9 @@
+.listcards {
+   display: inline-flex;
+   margin-right: 20px;
+}
+h2{
+   color: red;
+   text-decoration-line: underline;
+}
+
