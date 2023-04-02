@@ -1,6 +1,7 @@
 .listcards {
    display: inline-flex;
    margin-right: 20px;
+   margin-bottom: 20px;
 }
 h2{
    color: red;
