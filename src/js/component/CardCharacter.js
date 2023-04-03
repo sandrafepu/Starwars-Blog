@@ -16,9 +16,9 @@ export const CardCharacter = (props) => {
           <h3>{props.name}</h3>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <p>Gender: {props.gender}</p>
-          <p>Hair color: {props.hair_color}</p>
-          <p>Eye color: {props.eye_color}</p>
+          <p><strong>Gender:</strong> {props.gender}</p>
+          <p><strong>Hair color:</strong> {props.hair_color}</p>
+          <p><strong>Eye color:</strong> {props.eye_color}</p>
         </ListGroup>
         <Card.Body>
           <Link to={`/character/${props.index}`}><Button variant="outline-primary">Learn More!</Button></Link>

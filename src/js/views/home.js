@@ -29,9 +29,9 @@ export const Home = () =>{
 
 	return(
 	<div className="mt-5">
-        <h1><strong>Characters</strong></h1>
+        <h1 style={{ color: 'red' }}><strong>Characters</strong></h1>
 		<CharactersList charactersList={listCharacters.results}/>
-		<h1><strong>Planets</strong></h1>
+		<h1 style={{ color: 'red' }}><strong>Planets</strong></h1>
 		<PlanetsList planetsList={listPlanets.results}/>
 		
 	</div>
