@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import "../../styles/home.css";
-import { CardPlanet } from "../component/CardPlanet";
+import { PlanetsList } from "../component/PlanetsList";
 import { CharactersList } from "../component/CharactersList";
 
 
@@ -19,10 +19,10 @@ export const Home = () =>{
 	}, []);
 
 	useEffect(() => {
-		fetch("https://swapi.dev/api/planets/1/")
+		fetch("https://swapi.dev/api/planets/")
 		.then((response) => response.json())
 		.then((data) => {
-			console.log(data)
+			//console.log(data)
 			setListPlanets(data);
 		});
 	}, []);
@@ -32,7 +32,8 @@ export const Home = () =>{
         <h1><strong>Characters</strong></h1>
 		<CharactersList charactersList={listCharacters.results}/>
 		<h1><strong>Planets</strong></h1>
-		<CardPlanet></CardPlanet>
+		<PlanetsList planetsList={listPlanets.results}/>
+		
 	</div>
 );
 };
