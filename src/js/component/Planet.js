@@ -35,7 +35,7 @@ export const Planet = () => {
         <Col sm={2}><h2 className="fs-4 text-align-center">CLIMATE</h2><p className=" mt-3">{planet.climate}</p></Col>
         <Col sm={2}><h2 className="fs-4 text-align-center">DIAMETER</h2><p className=" mt-3">{planet.diameter}</p></Col>
         <Col sm={2}><h2 className="fs-4 text-align-center">GRAVITY</h2><p className=" mt-3">{planet.gravity}</p></Col>
-        <Col sm={2}><h2 className="fs-4 text-align-center">ROTATION PERIOD</h2><p className=" mt-3">{planet.totation_period}</p></Col>
+        <Col sm={2}><h2 className="fs-4 text-align-center">TERRAIN</h2><p className=" mt-3">{planet.terrain}</p></Col>
         <Col sm={2}><h2 className="fs-4 text-align-center">POPULATION</h2><p className=" mt-3">{planet.population}</p></Col>
       </Row>
         </>

@@ -5,10 +5,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from "react-router-dom";
 import "../../styles/cardcharacters.css";
+import { useContext } from 'react';
+import { Context } from '../store/appContext';
+
+
 
 export const CardCharacter = (props) => {
 
+  const {actions} = useContext(Context)
+
+ 
+
   return (  
+
     < div className="listcards">  
     <Card id="personcard" style={{ width: '18rem' }}>
       <Card.Img variant="top" src="https://via.placeholder.com/400x200" />
@@ -22,7 +31,7 @@ export const CardCharacter = (props) => {
         </ListGroup>
         <Card.Body>
           <Link to={`/character/${props.index}`}><Button variant="outline-primary">Learn More!</Button></Link>
-          <Button variant="outline-warning float-end"><FontAwesomeIcon icon={faHeart}/></Button>
+          <Button variant="outline-warning float-end" onClick={() => actions.addFavorites(props.name)}><FontAwesomeIcon icon={faHeart}/></Button>
       </Card.Body>
     </Card> 
     </div> 
